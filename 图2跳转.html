@@ -1,0 +1,161 @@
+/* 设置网页背景颜色为糖果色
+图二链接
+社交媒体平台上的个人形象、
+              社交互动和内容创作等方面。
+            社会结构、社会关系和社会行为
+          环境中的角色和互动
+        点击后展现人物关系图
+        真正的形象 还是那么完美
+
+*/
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>颜颜的社会学研究</title>
+  <style>
+    /* 自定义样式 */
+    body {
+      background-color: #FFD700;
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+    }
+
+    .person {
+      display: inline-block;
+      text-align: center;
+      margin: 20px;
+      position: relative;
+    }
+
+    .person img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+      border: 5px solid #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .person .tooltip {
+      position: absolute;
+      top: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px;
+      background-color: #F9B7FF;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 16px;
+      white-space: nowrap;
+      display: none;
+    }
+
+    .person:hover .tooltip {
+      display: block;
+    }
+
+    /* 响应式样式 */
+    @media screen and (max-width: 768px) {
+      .person {
+        margin: 10px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .person {
+        margin: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>颜颜的社会学研究</h1>
+  <h2>颜颜的家人关系图</h2>
+  <div class="container">
+    <div class="row">
+      <div class="person">
+        <img src="人物图/爸爸.jpg" alt="爸爸">
+        <div class="tooltip">
+          <p>他是颜颜的爸爸，颜颜的双眼皮来自于他。</p>
+        </div>
+      </div>
+      <div class="person">
+        <img src="人物图/妈妈.jpg" alt="妈妈">
+        <div class="tooltip">
+          <p>颜颜的妈妈是一个厨艺很厉害的女人，颜颜减肥都失败因为她烧的饭真的太好吃了</p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="person">
+        <img src="人物图/姐姐.jpg" alt="姐姐">
+        <div class="tooltip">
+          <p>她是颜颜的姐姐，我们发现他们在行为方面有许多相似之处，她们都很喜欢吃油炸食品和可乐</p>
+        </div>
+      </div>
+      <div class="person">
+        <img src="人物图/颜颜.jpg" alt="颜颜">
+        <div class="tooltip">
+          <p>这个是颜颜，她的特长是看起来很开心</p>
+        </div>
+      </div>
+      <div class="person">
+        <img src="人物图/妹妹.jpg" alt="妹妹">
+        <div class="tooltip">
+          <p>颜颜妹妹的特长和颜颜很像，看起来很开心</p>
+        </div>
+      </div>
+      <div class="person">
+        <img src="人物图/弟弟.jpg" alt="弟弟">
+        <div class="tooltip">
+          <p>颜颜弟弟的信息我们获取的比较少，因为他生长年龄没有颜颜久</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h2>颜颜的社交</h2>
+  <div class="container">
+    <div class="row">
+      <div class="person">
+        <img src="人物图/手机.jpg" alt="手机">
+        <div class="tooltip">
+          <p>这个是颜颜的手机，颜颜每天都和他社交3小时以上。</p>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="person">
+              <img src="人物图/IPAD.jpg" alt="IPAD">
+              <div class="tooltip">
+                <p>这是颜颜的IPAD，颜颜每天都带着她出门，但是她的第一选择往往都是手机，所以她是备胎朋友</p>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="person">
+                    <img src="人物图/电脑.jpg" alt="电脑">
+                    <div class="tooltip">
+                      <p>他是颜颜的晚上的朋友，颜颜每天晚上最后的聊天都是和他</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

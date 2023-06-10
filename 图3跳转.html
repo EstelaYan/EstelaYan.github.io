@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>颜颜的饮食研究</title>
+  <style>
+    body {
+      background-color: #FFD700; /* 设置网页背景颜色为糖果色 */
+      font-family: 'Comic Sans MS', cursive; /* 使用卡通字体 */
+      transition: background-color 0.5s;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      width: 100px;
+      height: 100px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+    }
+
+    .emoji {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      background-image: url('人物图/我喜欢表情包.jpg'); /* 使用相对路径指定图片位置 */
+      background-size: cover;
+      border-radius: 5px;
+      animation: showEmoji 2s linear;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @keyframes showEmoji {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .heart {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      background-image: url('人物图/爱心.gif');
+      background-size: cover;
+      animation: showHeart 1s linear;
+      z-index: 1;
+    }
+
+    @keyframes showHeart {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>颜颜的饮食研究</h1>
+  <h2>点击小卡片查看颜颜喜不喜欢这个食物
+  粉色就是喜欢</h2>
+  <div class="container">
+    <div class="card">苹果</div>
+    <div class="card">香蕉</div>
+    <div class="card">橙子</div>
+    <div class="card">草莓</div>
+    <div class="card">蓝莓</div>
+    <div class="card">西瓜</div>
+    <div class="card">芒果</div>
+    <div class="card">樱桃</div>
+    <div class="card">菠萝</div>
+    <div class="card">柠檬</div>
+    <div class="card">葡萄</div>
+    <div class="card">橘子</div>
+    <div class="card">桃子</div>
+    <div class="card">猕猴桃</div>
+    <div class="card">石榴</div>
+    <div class="card">哈密瓜</div>
+    <div class="card">柚子</div>
+    <div class="card">火龙果</div>
+    <div class="card">榴莲</div>
+    <div class="card">荔枝</div>
+    <div class="card">梨子</div>
+    <div class="card">橄榄</div>
+    <div class="card">柿子</div>
+    <div class="card">蜜瓜</div>
+    <div class="card">杏子</div>
+    <div class="card">李子</div>
+    <div class="card">牛油果</div>
+    <div class="card">柚子</div>
+    <div class="card">菠萝蜜</div>
+    <div class="card">木瓜</div>
+    <div class="card">山竹</div>
+    <div class="card">莲雾</div>
+    <div class="card">龙眼</div>
+    <div class="card">蛇果</div>
+    <div class="card">蓮霧</div>
+    <div class="card">糯米糍</div>
+    <div class="card">芋头糕</div>
+    <div class="card">凤梨酥</div>
+    <div class="card">红豆糕</div>
+    <div class="card">草莓蛋糕</div>
+    <div class="card">蓝莓酥</div>
+    <!-- 添加更多食物名称的卡片 -->
+  </div>
+
+  <div class="emoji hidden"></div>
+  <div class="heart hidden"></div>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const emoji = document.querySelector('.emoji');
+    const heart = document.querySelector('.heart');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        document.body.style.backgroundColor = '#FF69B4'; // 点击时将背景颜色变为粉红色
+        heart.classList.remove('hidden');
+        setTimeout(() => {
+          heart.classList.add('hidden');
+          document.body.style.backgroundColor = '#FFD700'; // 一秒后将背景颜色恢复为糖果色
+        }, 1000);
+
+        emoji.classList.remove('hidden');
+        setTimeout(() => {
+          emoji.classList.add('hidden');
+        }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>
